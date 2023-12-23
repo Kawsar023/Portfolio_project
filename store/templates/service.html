@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<!-- ======= Services Section ======= -->
+
+<section id="services" class="services-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Services
+            </h3>
+            <p class="subtitle-a">
+               You get developer experienced in the required skills that you can directly manage. 
+            </p>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+    <!-- Card -->
+     <div class="row">
+      {% for x in service %}    
+          <div class="card col-12 col-sm-6 col-md-4 col-lg-4">
+            <!-- <div class="col-md-4 col-sm-6 col-lg-4"> -->
+               <div class="card mt-2 mx-3 shadow">
+                  <img src="{{ x.image.url}}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title">{{x.title}}</h5>
+                      <p class="card-text">{{x.discription}}</p>
+                      <a href="{% url 'details_page' x.pk %}"class="btn btn-primary">More Info</a>
+          </div>
+          </div>
+          </div>
+{% endfor %}
+
+     <!-- Card -->
+     <!-- <div class="row">
+      {% for x in card %}    
+          <div class="card col-12 col-sm-6 col-md-4 col-lg-3">
+               <div class="card mt-3 mx-2 shadow">
+                  <img src="{{ x.image.url}}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title">{{x.title}}</h5>
+                      <p class="card-text">{{x.discription}}</p>
+                      <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+          </div>
+          </div>
+{% endfor %} -->
+
+<!-- <section id="services" class="services-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Services
+            </h3>
+            <p class="subtitle-a">
+              You get developer experienced in the required skills that you can directly manage.
+            </p>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+      <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="bi bi-briefcase"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">{{Service.title}}</h2>
+              <p class="s-description text-center">{{Service.description}}</p>
+            </div>
+          </div>
+        </div>
+  
+
+       
+        <!- <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="bi bi-card-checklist"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Web Development</h2>
+              <p class="s-description text-center">
+                Web development, also known as website development, refers to the tasks associated with creating, building, and maintaining websites and web applications that run online on a browser. 
+                It may, however, also include web design, web programming, and database management.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="bi bi-bar-chart"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Photography</h2>
+              <p class="s-description text-center">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
+                provident vitae! Magni
+                tempora perferendis eum non provident.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="bi bi-binoculars"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Responsive Design</h2>
+              <p class="s-description text-center">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
+                provident vitae! Magni
+                tempora perferendis eum non provident.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="bi bi-brightness-high"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Graphic Design</h2>
+              <p class="s-description text-center">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
+                provident vitae! Magni
+                tempora perferendis eum non provident.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="bi bi-calendar4-week"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Marketing Services</h2>
+              <p class="s-description text-center">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
+                provident vitae! Magni
+                tempora perferendis eum non provident.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>End Services Section -->
+  
+   <!-- -> -->
+
+{% endblock content %}
